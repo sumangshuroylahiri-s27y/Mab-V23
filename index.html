@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAB Incorporation | Beyond Boundaries..!</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="MAB Incorporation - Environmental Engineering & Water Treatment Company. Established in 2016, providing sustainable water solutions.">
+    <meta name="keywords" content="Water Treatment, Waste Water Treatment, Sewage Treatment, Rain Water Harvesting, Solar Water Plant, MAB Incorporation, Jalpaiguri">
+    <meta name="author" content="MAB Incorporation">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="MAB Incorporation | Beyond Boundaries..!">
+    <meta property="og:description" content="Environmental Engineering & Water Treatment Company providing sustainable solutions.">
+    <meta property="og:image" content="http://www.mabincorporation.com/assets/images/slide/HOME1.JPG">
+    <meta property="og:url" content="http://www.mabincorporation.com">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #003366;
+            --primary-rgb: 0, 51, 102;
+            --primary-dark: #001a33;
+            --accent: #0077B6;
+            --accent-rgb: 0, 119, 182;
+            --accent-glow: rgba(0, 119, 182, 0.3);
+            --white: #ffffff;
+            --light-bg: #f8fafc;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        /* Loading Screen */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease;
+        }
+
+        .loader-content {
+            text-align: center;
+        }
+
+        .loader-logo img {
+            width: 120px;
+            height: auto;
+            margin-bottom: 15px;
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; filter: drop-shadow(0 0 0px var(--accent-glow)); }
+            50% { transform: scale(1.05); opacity: 0.8; filter: drop-shadow(0 0 20px var(--accent-glow)); }
+            100% { transform: scale(1); opacity: 1; filter: drop-shadow(0 0 0px var(--accent-glow)); }
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 25px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        nav.scrolled {
+            background: rgba(var(--primary-rgb), 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 5%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            margin-right: 12px;
+            border-radius: 4px;
+            background: white;
+            padding: 2px;
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            color: var(--accent);
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-slides {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(var(--primary-rgb), 0.85), rgba(var(--primary-rgb), 0.4));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 20px;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+        }
+
+        .hero-content h1 {
+            font-size: 5.5rem;
+            margin-bottom: 20px;
+            line-height: 1;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            animation: slideDown 1s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .hero-content p {
+            font-size: 1.6rem;
+            margin-bottom: 45px;
+            color: var(--accent);
+            font-weight: 500;
+            letter-spacing: 1px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero-btns .btn {
+            padding: 18px 40px;
+            margin: 10px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: var(--transition);
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 10px 20px rgba(var(--accent-rgb), 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--white);
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(var(--accent-rgb), 0.4);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Common Section Styles */
+        section {
+            padding: 100px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title h2::before {
+            content: attr(data-text);
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 5rem;
+            opacity: 0.05;
+            white-space: nowrap;
+            z-index: -1;
+            color: var(--primary);
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* About Us */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-img {
+            position: relative;
+            padding: 20px;
+        }
+
+        .about-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70%;
+            height: 70%;
+            border: 10px solid var(--accent);
+            border-radius: 20px;
+            z-index: -1;
+            opacity: 0.2;
+        }
+
+        .about-img::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 70%;
+            height: 70%;
+            background: var(--primary);
+            border-radius: 20px;
+            z-index: -1;
+            opacity: 0.05;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: var(--transition);
+            display: block;
+        }
+
+        .about-img img:hover {
+            transform: scale(1.02);
+        }
+
+        .about-text p {
+            margin-bottom: 30px;
+            color: var(--text-light);
+            text-align: justify;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .quote {
+            background: var(--light-bg);
+            padding: 40px;
+            border-radius: 0 20px 20px 0;
+            border-left: 8px solid var(--accent);
+            font-style: italic;
+            margin-top: 40px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .quote::before {
+            content: '\f10d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 3rem;
+            color: var(--accent);
+            opacity: 0.05;
+        }
+
+        .quote span {
+            display: block;
+            margin-top: 20px;
+            font-weight: 700;
+            font-style: normal;
+            color: var(--primary);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Topics/Expertise */
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+        }
+
+        .topic-card {
+            background: var(--white);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            transition: var(--transition);
+            border: 1px solid rgba(var(--primary-rgb), 0.05);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-20px);
+            box-shadow: 0 30px 60px rgba(0, 51, 102, 0.12);
+            border-color: var(--accent);
+        }
+
+        .topic-img {
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .topic-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(0, 51, 102, 0.6));
+            opacity: 0.6;
+            transition: var(--transition);
+        }
+
+        .topic-card:hover .topic-img::after {
+            opacity: 0.8;
+        }
+
+        .topic-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .topic-card:hover .topic-img img {
+            transform: scale(1.1);
+        }
+
+        .topic-info {
+            padding: 40px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .topic-info h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .topic-info h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .topic-info p {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        /* Services */
+        #services {
+            background: var(--primary-dark);
+            position: relative;
+            overflow: hidden;
+            color: var(--white);
+            padding: 120px 10%;
+        }
+
+        #services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('http://www.mabincorporation.com/assets/images/slide/HOME2.JPG') center/cover fixed;
+            opacity: 0.1;
+        }
+
+        #services::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(var(--accent-rgb), 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        #services .section-title h2 {
+            color: var(--white);
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            padding: 60px 40px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            text-align: center;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.1), transparent);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-15px);
+            border-color: rgba(var(--accent-rgb), 0.4);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-icon {
+            font-size: 4rem;
+            color: var(--accent);
+            margin-bottom: 30px;
+            display: inline-block;
+            transition: var(--transition);
+            text-shadow: 0 0 20px rgba(var(--accent-rgb), 0.3);
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) translateY(-5px);
+            text-shadow: 0 0 30px rgba(var(--accent-rgb), 0.6);
+        }
+
+        .service-card h3 {
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            font-size: 1.05rem;
+            opacity: 0.7;
+            line-height: 1.8;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 50px;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 50px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(var(--primary-rgb), 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle at top right, rgba(var(--accent-rgb), 0.05), transparent);
+            border-radius: 0 0 0 100%;
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 25px 50px rgba(var(--primary-rgb), 0.1);
+            transform: translateY(-10px);
+        }
+
+        .project-card:hover::before {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle at top right, rgba(var(--accent-rgb), 0.1), transparent);
+        }
+
+        .project-tag {
+            background: var(--accent-light);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+            align-self: flex-start;
+            box-shadow: 0 5px 15px rgba(var(--accent-rgb), 0.1);
+        }
+
+        .project-card h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            line-height: 1.3;
+        }
+
+        .project-meta {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .project-meta span {
+            display: flex;
+            align-items: center;
+        }
+
+        .project-meta i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+
+        .project-work {
+            font-size: 1.05rem;
+            border-top: 1px solid var(--light-bg);
+            padding-top: 30px;
+            color: var(--text-light);
+            margin-top: auto;
+            line-height: 1.7;
+        }
+
+        .project-work strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+        }
+
+        /* Clients */
+        #clients {
+            background: var(--light-bg);
+            position: relative;
+        }
+
+        #clients::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 10% 20%, rgba(var(--accent-rgb), 0.03) 0%, transparent 40%),
+                        radial-gradient(circle at 90% 80%, rgba(var(--primary-rgb), 0.03) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .client-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        .client-logo-item {
+            width: 160px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            filter: grayscale(100%) contrast(0.5);
+            opacity: 0.5;
+            transition: var(--transition);
+        }
+
+        .client-logo-item:hover {
+            filter: grayscale(0%) contrast(1);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .client-logo-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .client-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+        }
+
+        .client-cat h4 {
+            color: var(--primary);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            font-size: 1.25rem;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+
+        .client-cat ul {
+            list-style: none;
+        }
+
+        .client-cat li {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 25px;
+            transition: var(--transition);
+        }
+
+        .client-cat li:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .client-cat li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* Stats Counter */
+        #stats {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 120px 10%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #stats::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('http://www.mabincorporation.com/assets/images/slide/HOME3.jpeg') center/cover fixed;
+            opacity: 0.15;
+        }
+
+        #stats::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(var(--primary-rgb), 0.8), rgba(var(--primary-rgb), 0.4));
+            pointer-events: none;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-number {
+            font-size: 5rem;
+            font-weight: 900;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 15px;
+            line-height: 1;
+            text-shadow: 0 0 30px rgba(var(--accent-rgb), 0.4);
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            opacity: 0.9;
+            color: var(--white);
+        }
+
+        /* Contact */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+        }
+
+        .contact-info-box {
+            background: var(--primary);
+            color: var(--white);
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(var(--primary-rgb), 0.2);
+        }
+
+        .contact-info-box h3 {
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 35px;
+        }
+
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-right: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            flex-shrink: 0;
+        }
+
+        .info-item p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 60px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0, 51, 102, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-form::before {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle at center, rgba(var(--accent-rgb), 0.03), transparent);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 18px 25px;
+            border: 1px solid rgba(var(--primary-rgb), 0.1);
+            border-radius: 12px;
+            outline: none;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--light-bg);
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--accent);
+            background: var(--white);
+            box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.1);
+        }
+
+        .form-group textarea {
+            height: 180px;
+        }
+
+        .error-message {
+            color: #ef4444;
+            font-size: 0.85rem;
+            margin-top: 8px;
+            display: none;
+            font-weight: 500;
+        }
+
+        .form-group.invalid input, .form-group.invalid textarea {
+            border-color: #ef4444;
+            background: #fef2f2;
+        }
+
+        .form-group.invalid .error-message {
+            display: block;
+        }
+
+        .form-group.valid input, .form-group.valid textarea {
+            border-color: #10b981;
+        }
+
+        .submit-btn {
+            background: var(--accent);
+            color: var(--white);
+            border: none;
+            padding: 18px 35px;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(var(--primary-rgb), 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 100px 10% 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .footer-about p {
+            font-size: 1rem;
+            opacity: 0.7;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-right: 15px;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.05);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .footer-links h4, .footer-contact h4, .social-links-col h4 {
+            margin-bottom: 35px;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 18px;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--accent);
+            padding-left: 10px;
+        }
+
+        .footer-contact p {
+            opacity: 0.7;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .footer-contact p i {
+            margin-right: 15px;
+            color: var(--accent);
+            margin-top: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            opacity: 0.5;
+        }
+
+        /* Floating Buttons */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: var(--accent);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .back-to-top:hover {
+            background: var(--primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            nav { padding: 20px 30px; }
+            .hero-content h1 { font-size: 3rem; }
+            .about-container { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary);
+                flex-direction: column;
+                padding: 20px;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links li { margin: 15px 0; }
+            .mobile-menu-btn { display: block; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .contact-wrapper { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            section { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="http://www.mabincorporation.com/assets/images/MAB_LOGO.jpg" alt="MAB Logo">
+            </div>
+            <p style="color: var(--primary); font-weight: 600; letter-spacing: 1px;">Beyond Boundaries..!</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <a href="#" class="logo">
+            <img src="http://www.mabincorporation.com/assets/images/MAB_LOGO.jpg" alt="MAB Logo">
+            <div class="logo-text">MAB <span>Incorporation</span></div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#topics">Expertise</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" style="padding: 0;">
+        <div id="hero">
+            <div class="hero-slides">
+                <div class="slide active" style="background-image: url('http://www.mabincorporation.com/assets/images/slide/HOME1.JPG');"></div>
+                <div class="slide" style="background-image: url('http://www.mabincorporation.com/assets/images/slide/HOME2.JPG');"></div>
+                <div class="slide" style="background-image: url('http://www.mabincorporation.com/assets/images/slide/HOME3.jpeg');"></div>
+                <div class="slide" style="background-image: url('http://www.mabincorporation.com/assets/images/slide/HOME4.jpeg');"></div>
+                <div class="slide" style="background-image: url('http://www.mabincorporation.com/assets/images/slide/HOME5.jpeg');"></div>
+                <div class="slide" style="background-image: url('http://www.mabincorporation.com/assets/images/slide/HOME6.jpeg');"></div>
+            </div>
+            <div class="hero-overlay">
+                <div class="hero-content" data-aos="fade-up">
+                    <h1>MAB Incorporation</h1>
+                    <p>"Beyond Boundaries..!"</p>
+                    <div class="hero-btns">
+                        <a href="#topics" class="btn btn-primary">Explore Services</a>
+                        <a href="#contact" class="btn btn-outline">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about">
+        <div class="section-title" data-aos="fade-up">
+            <h2 data-text="ABOUT MAB">About Us</h2>
+        </div>
+        <div class="about-container">
+            <div class="about-img" data-aos="fade-right">
+                <img src="http://www.mabincorporation.com/assets/images/mab/Metal Removal Plant at Residential Complex.jpeg" alt="Water Treatment Plant">
+            </div>
+            <div class="about-text" data-aos="fade-left">
+                <p>MAB Incorporation was established in the year 2016 as a sole proprietorship business organization at Jalpaiguri, West Bengal. It was formed as a result of FP7-ENV-2012, ECO-India - Energy-efficient, community-based water and wastewater-treatment systems for deployment in India, funded by Department of Science & Technology, Govt. of India and European Union.</p>
+                <p>MAB Incorporation aims to demolish water related problems so that everyone should have access to safe drinking water with minimal expenses. The firm has managed to cater safe drinking water in remote forest communities by developing solar based water treatment plants. It has marked its presence in food production industries like Rice mills, tea estates.</p>
+                <p>In urban areas, it has developed water and waste water treatment plants for individual households, society, commercial units, hospitals and institutions. It has developed water ATM systems for local government municipalities.</p>
+                <div class="quote">
+                    "Service is the rent we pay for the life we have been given."
+                    <span>- Marian Wright Edelman</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics/Expertise -->
+    <section id="topics">
+        <div class="section-title" data-aos="fade-up">
+            <h2 data-text="EXPERTISE">Our Expertise</h2>
+        </div>
+        <div class="topics-grid">
+            <!-- 1 -->
+            <div class="topic-card" data-aos="zoom-in">
+                <div class="topic-img">
+                    <img src="http://www.mabincorporation.com/assets/images/topics/wt.jpg" alt="Water Treatment">
+                </div>
+                <div class="topic-info">
+                    <h3>Water Treatment</h3>
+                    <p>MAB Incorporation designs Water Treatment Plants according to the needs of the end user/industry. Products like Metal Removal Plants, De mineralized Plants, Reverse Osmosis Plants, Compact ROs etc.</p>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="topic-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="topic-img">
+                    <img src="http://www.mabincorporation.com/assets/images/topics/wwt.jpg" alt="Waste Water Treatment">
+                </div>
+                <div class="topic-info">
+                    <h3>Waste Water Treatment</h3>
+                    <p>Customized Effluent Treatment solutions for various types of industrial waste water to suit the wide variety of effluents and to maintain efficiency. Recycle and reuse of treated effluents is profitable.</p>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="topic-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="topic-img">
+                    <img src="http://www.mabincorporation.com/assets/images/topics/st.jpg" alt="Sewage Treatment">
+                </div>
+                <div class="topic-info">
+                    <h3>Sewage Treatment</h3>
+                    <p>Sewage is a resource that can be recycled for various uses like gardening, toilet flushing, car wash. Sewage Treatment Plants are specially designed for Communities, Flats and Institutions.</p>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="topic-card" data-aos="zoom-in">
+                <div class="topic-img">
+                    <img src="http://www.mabincorporation.com/assets/images/topics/rw.jpg" alt="Rain Water Harvesting">
+                </div>
+                <div class="topic-info">
+                    <h3>Rain Water Harvesting</h3>
+                    <p>Rainwater harvesting (RWH) is a simple method by which rainfall is collected for future usage. MAB promotes water harvesting particularly in urban areas and industries as a technological solution.</p>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="topic-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="topic-img">
+                    <img src="http://www.mabincorporation.com/assets/images/topics/wr.jpg" alt="Water Recycling">
+                </div>
+                <div class="topic-info">
+                    <h3>Water Recycling</h3>
+                    <p>MAB Incorporation designs and implements Water Recycling. Process of converting wastewater into water that can be reused for irrigation, agricultural fields or replenishing surface water.</p>
+                </div>
+            </div>
+            <!-- 6 -->
+            <div class="topic-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="topic-img">
+                    <img src="http://www.mabincorporation.com/assets/images/topics/cw.jpg" alt="Civil Works">
+                </div>
+                <div class="topic-info">
+                    <h3>Civil Works</h3>
+                    <p>With professional engineers and qualified team, MAB Incorporation has expertise in Survey, Design, Estimate, Supervision and Turnkey Civil Projects.</p>
+                </div>
+            </div>
+            <!-- 7 -->
+            <div class="topic-card" data-aos="zoom-in">
+                <div class="topic-img">
+                    <img src="http://www.mabincorporation.com/assets/images/topics/sp.jpg" alt="Swimming Pools">
+                </div>
+                <div class="topic-info">
+                    <h3>Swimming Pools</h3>
+                    <p>MAB Incorporation designs and installs state of art Filtration Systems for Swimming Pools, Leisure Pools, Lap Pools, Diving Pools, Olympic Pools, Counter current Pools etc.</p>
+                </div>
+            </div>
+            <!-- 8 -->
+            <div class="topic-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="topic-img">
+                    <img src="http://www.mabincorporation.com/assets/images/topics/fnt.jpg" alt="Fountains">
+                </div>
+                <div class="topic-info">
+                    <h3>Fountains</h3>
+                    <p>A wide variety of Fountains like Musical Fountains, Dome Fountains, Jet Fountains, Floating Fountains, Bell Fountains, Foam Fountains, Mist Fountains, Glass Fountains etc.</p>
+                </div>
+            </div>
+            <!-- 9 -->
+            <div class="topic-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="topic-img">
+                    <img src="http://www.mabincorporation.com/assets/images/topics/solar.jpg" alt="Solar">
+                </div>
+                <div class="topic-info">
+                    <h3>Solar</h3>
+                    <p>MAB deals with Solar EPC for rooftop power plants, irrigation pumping, lighting and micro grid solutions. Also designs Solar Based Water Treatment Plants.</p>
+                </div>
+            </div>
+            <!-- 10 -->
+            <div class="topic-card" data-aos="zoom-in">
+                <div class="topic-img">
+                    <img src="http://www.mabincorporation.com/assets/images/topics/iw.jpg" alt="Integrated Solid Waste Management">
+                </div>
+                <div class="topic-info">
+                    <h3>Integrated Solid Waste Management</h3>
+                    <p>Caters to Municipal Solid Waste Management including collection, transfer, transport and disposal. Recycling systems and composting systems.</p>
+                </div>
+            </div>
+            <!-- 11 -->
+            <div class="topic-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="topic-img">
+                    <img src="http://www.mabincorporation.com/assets/images/topics/bg.jpg" alt="Bio Gas Plants">
+                </div>
+                <div class="topic-info">
+                    <h3>Bio Gas Plants</h3>
+                    <p>Surveys, builds capacities, designs, installs and promotes usage of Biogas in a sustainable way, improving the life of countrymen by bridging the energy deficit.</p>
+                </div>
+            </div>
+            <!-- 12 -->
+            <div class="topic-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="topic-img">
+                    <img src="http://www.mabincorporation.com/assets/images/topics/cbd.jpg" alt="Community Based Drinking Water Systems">
+                </div>
+                <div class="topic-info">
+                    <h3>Community Based Drinking Water Systems</h3>
+                    <p>Implementing sustainable community-based drinking water treatment schemes. Setting up self-maintained drinking water systems operated by the community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <div class="section-title" data-aos="fade-up">
+            <h2 data-text="SERVICES">Our Services</h2>
+        </div>
+        <div class="services-container">
+            <div class="service-card" data-aos="flip-left">
+                <div class="service-icon"><i class="fas fa-microscope"></i></div>
+                <h3>RESEARCH</h3>
+                <p>MAB Incorporation explores various technological options and suggests the best suited for the client's need.</p>
+            </div>
+            <div class="service-card" data-aos="flip-left" data-aos-delay="100">
+                <div class="service-icon"><i class="fas fa-handshake"></i></div>
+                <h3>CONSULTATION</h3>
+                <p>Includes: Social Responsibility, Capacity Building, Monitoring & Evaluation, Project Management, Strategy Building, Technology Consultation.</p>
+            </div>
+            <div class="service-card" data-aos="flip-left" data-aos-delay="200">
+                <div class="service-icon"><i class="fas fa-tools"></i></div>
+                <h3>IMPLEMENTATION</h3>
+                <p>Implementation of the best suited technology with precision and long-term sustainability in mind.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <div class="section-title" data-aos="fade-up">
+            <h2 data-text="PROJECTS">Featured Projects</h2>
+        </div>
+        <div class="projects-grid">
+            <!-- P1 -->
+            <div class="project-card" data-aos="fade-up">
+                <div class="project-header">
+                    <span class="project-tag">Completed</span>
+                </div>
+                <h3>ECO-INDIA</h3>
+                <div class="project-meta">
+                    <p><i class="fas fa-map-marker-alt"></i> Murshidabad, WB, India</p>
+                    <p><i class="fas fa-info-circle"></i> Collaborative Project under DST, Govt. of India & EC</p>
+                </div>
+                <div class="project-work">
+                    <p><strong>Work:</strong> Civil works, grouting, water proofing, fencing, field test kit, solar set, 2000m distribution pipeline.</p>
+                </div>
+            </div>
+            <!-- P2 -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-header">
+                    <span class="project-tag">Ongoing</span>
+                </div>
+                <h3>Tomar Jol Asche</h3>
+                <div class="project-meta">
+                    <p><i class="fas fa-map-marker-alt"></i> N.24 PGS, WB, India</p>
+                    <p><i class="fas fa-info-circle"></i> Collaborative Project under DST, Govt. of India & EC</p>
+                </div>
+                <div class="project-work">
+                    <p><strong>Work:</strong> Capacity Building, Civil Structure, Filtration System, Solar Equipments, Water Quality Monitoring.</p>
+                </div>
+            </div>
+            <!-- P3 -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-header">
+                    <span class="project-tag">Ongoing</span>
+                </div>
+                <h3>Border Village Drinking Water</h3>
+                <div class="project-meta">
+                    <p><i class="fas fa-map-marker-alt"></i> Rajganj Block, Jalpaiguri</p>
+                    <p><i class="fas fa-info-circle"></i> Under Office of the BDO, Rajganj Block</p>
+                </div>
+                <div class="project-work">
+                    <p><strong>Work:</strong> Technology Suggestion, Project Designing, Strategy Management, Filtration & Distribution System.</p>
+                </div>
+            </div>
+            <!-- P4 -->
+            <div class="project-card" data-aos="fade-up">
+                <h3>Solar Forest Camps</h3>
+                <div class="project-meta">
+                    <p><i class="fas fa-map-marker-alt"></i> Gorumara National Park</p>
+                    <p><i class="fas fa-info-circle"></i> Directorate of Forests, Govt. of West Bengal</p>
+                </div>
+                <div class="project-work">
+                    <p><strong>Work:</strong> Solar panels installation, Water treatment plant, Water quality monitoring in remote camps.</p>
+                </div>
+            </div>
+            <!-- P5 -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <h3>PHED Water Treatment</h3>
+                <div class="project-meta">
+                    <p><i class="fas fa-info-circle"></i> Public Health Engineering Department</p>
+                </div>
+                <div class="project-work">
+                    <p><strong>Work:</strong> Pump house construction, FRP filter vessels, Iron removal unit, Plumbing works, Pipelines.</p>
+                </div>
+            </div>
+            <!-- P6 -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <h3>Rice Manufacturing Industries</h3>
+                <div class="project-meta">
+                    <p><i class="fas fa-info-circle"></i> Boiler Feeding Solutions</p>
+                </div>
+                <div class="project-work">
+                    <p><strong>Work:</strong> WTPs producing boiler feed water that increases life of boiler and improves quality of end product.</p>
+                </div>
+            </div>
+            <!-- P7 -->
+            <div class="project-card" data-aos="fade-up">
+                <h3>Iron Removal Plants</h3>
+                <div class="project-meta">
+                    <p><i class="fas fa-info-circle"></i> Urban/Rural Societies & Hotels</p>
+                </div>
+                <div class="project-work">
+                    <p><strong>Work:</strong> Prevents health related disease, brown stains on floors, utensils, clothes, tanks, appliances.</p>
+                </div>
+            </div>
+            <!-- P8 -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <h3>Country Liquor Bottling Plants</h3>
+                <div class="project-meta">
+                    <p><i class="fas fa-info-circle"></i> Quality Improvement Solutions</p>
+                </div>
+                <div class="project-work">
+                    <p><strong>Work:</strong> WTP developed considering pH, hardness, TDS and metals parameters to decrease spirit consumption.</p>
+                </div>
+            </div>
+            <!-- P9 -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <h3>Tea Industries</h3>
+                <div class="project-meta">
+                    <p><i class="fas fa-info-circle"></i> Brewing Quality Enhancement</p>
+                </div>
+                <div class="project-work">
+                    <p><strong>Work:</strong> WTP developed considering water quality parameters to significantly enhance tea quality.</p>
+                </div>
+            </div>
+            <!-- P10 -->
+            <div class="project-card" data-aos="fade-up">
+                <h3>Turnkey Swimming Pool</h3>
+                <div class="project-meta">
+                    <p><i class="fas fa-map-marker-alt"></i> Saraswatipur Tea Resorts, Jalpaiguri</p>
+                </div>
+                <div class="project-work">
+                    <p><strong>Work:</strong> Structural designing, Civil Construction, Filtration Equipments, Water quality monitoring.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients -->
+    <section id="clients">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Our Valuable Clients</h2>
+        </div>
+        
+        <div class="client-logos" data-aos="fade-up">
+            <div class="client-logo-item"><img src="http://www.mabincorporation.com/assets/images/client/1.png" alt="Client"></div>
+            <div class="client-logo-item"><img src="http://www.mabincorporation.com/assets/images/client/2.jpg" alt="Client"></div>
+            <div class="client-logo-item"><img src="http://www.mabincorporation.com/assets/images/client/3.png" alt="Client"></div>
+            <div class="client-logo-item"><img src="http://www.mabincorporation.com/assets/images/client/4.png" alt="Client"></div>
+            <div class="client-logo-item"><img src="http://www.mabincorporation.com/assets/images/client/5.png" alt="Client"></div>
+            <div class="client-logo-item"><img src="http://www.mabincorporation.com/assets/images/client/6.png" alt="Client"></div>
+            <div class="client-logo-item"><img src="http://www.mabincorporation.com/assets/images/client/7.jpeg" alt="Client"></div>
+            <div class="client-logo-item"><img src="http://www.mabincorporation.com/assets/images/client/8.jpg" alt="Client"></div>
+            <div class="client-logo-item"><img src="http://www.mabincorporation.com/assets/images/client/9.jpg" alt="Client"></div>
+            <div class="client-logo-item"><img src="http://www.mabincorporation.com/assets/images/client/10.jpg" alt="Client"></div>
+            <div class="client-logo-item"><img src="http://www.mabincorporation.com/assets/images/client/11.jpg" alt="Client"></div>
+        </div>
+
+        <div class="client-categories">
+            <div class="client-cat" data-aos="fade-up">
+                <h4>Govt. of India & Europe</h4>
+                <ul>
+                    <li>ECO INDIA - Murshidabad, WB</li>
+                    <li>TOMAR JOL ASCHE - N.24 PGS, WB</li>
+                </ul>
+            </div>
+            <div class="client-cat" data-aos="fade-up" data-aos-delay="100">
+                <h4>Govt. of West Bengal</h4>
+                <ul>
+                    <li>PHED - 23 Installations</li>
+                    <li>Dept. of Forests - 06 Installations</li>
+                    <li>BDO Rajganj Block - 06 Installations</li>
+                    <li>BSF Camps - Community Systems</li>
+                </ul>
+            </div>
+            <div class="client-cat" data-aos="fade-up" data-aos-delay="200">
+                <h4>Hotels & Hospitalities</h4>
+                <ul>
+                    <li>Mayfair Spa Resorts, Gangtok</li>
+                    <li>Saraswatipur Tea Resorts, Jalpaiguri</li>
+                    <li>Walkers Village Pub, Siliguri</li>
+                </ul>
+            </div>
+            <div class="client-cat" data-aos="fade-up">
+                <h4>Tea Industries</h4>
+                <ul>
+                    <li>Saraswatipur Tea Estate</li>
+                    <li>Bikram Tea</li>
+                    <li>Katyani Beverages</li>
+                    <li>New Leaf Tea Industries</li>
+                    <li>Sannyasihat Tea Processing</li>
+                </ul>
+            </div>
+            <div class="client-cat" data-aos="fade-up" data-aos-delay="100">
+                <h4>Rice Mills & Industries</h4>
+                <ul>
+                    <li>MJ Grain Products (MJB Group)</li>
+                    <li>Balaji Agro Food Products</li>
+                    <li>Monalisa Bottling Industries</li>
+                    <li>Urbashi Fervour C.S. Bottling</li>
+                </ul>
+            </div>
+            <div class="client-cat" data-aos="fade-up" data-aos-delay="200">
+                <h4>Domestic & Real Estate</h4>
+                <ul>
+                    <li>SandeepG Realestate</li>
+                    <li>Misra Housing Complex</li>
+                    <li>Mr. P.B.Gupta's Residence</li>
+                    <li>Mr. Dharam Paswan's Residence</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Counter -->
+    <section id="stats">
+        <div class="stats-container">
+            <div class="stat-item" data-aos="zoom-in">
+                <span class="stat-number" data-target="8">0</span>
+                <span class="stat-label">Years of Experience</span>
+            </div>
+            <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                <span class="stat-number" data-target="50">0</span>
+                <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                <span class="stat-number" data-target="30">0</span>
+                <span class="stat-label">Happy Clients</span>
+            </div>
+            <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                <span class="stat-number" data-target="5">0</span>
+                <span class="stat-label">States Covered</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-info-box" data-aos="fade-right">
+                <h3>Get In Touch</h3>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Opposite of Kadamtala Municipality Bus Stand, Kadamtala, PO & DT - Jalpaiguri, West Bengal, India. PIN - 735101</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>+91-82509-81300<br>+91-81453-88880</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>inc.mab@gmail.com</p>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3568.513284067425!2d88.71158527521175!3d26.51963497688329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e4695427777777%3A0x7777777777777777!2sJalpaiguri%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="contact-form" data-aos="fade-left">
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <span class="error-message">Please enter your full name (at least 3 characters).</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <span class="error-message">Please enter a valid email address.</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="phone" name="phone" placeholder="Your Phone Number" required>
+                        <span class="error-message">Please enter a valid 10-digit phone number.</span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        <span class="error-message">Message must be at least 10 characters long.</span>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-about">
+                <div class="footer-logo" style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <img src="http://www.mabincorporation.com/assets/images/MAB_LOGO.jpg" alt="MAB Logo" style="height: 60px; border-radius: 5px; margin-right: 15px; background: white; padding: 2px;">
+                    <h3 style="margin-bottom: 0;">MAB <span style="color: var(--accent); display: block; font-size: 0.8rem; letter-spacing: 2px;">Incorporation</span></h3>
+                </div>
+                <p>MAB Incorporation aims to demolish water related problems so that everyone should have access to safe drinking water with minimal expenses.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#topics">Our Expertise</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#clients">Clients</a></li>
+                </ul>
+            </div>
+            <div class="social-links-col">
+                <h4>Our Social Links</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/inc.mab/" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/mab-incorporation/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/mabincorporation/?hl=en" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-map-marker-alt" style="margin-right: 10px; color: var(--accent);"></i> Jalpaiguri, West Bengal, India</p>
+                <p><i class="fas fa-phone-alt" style="margin-right: 10px; color: var(--accent);"></i> +91-82509-81300</p>
+                <p><i class="fas fa-envelope" style="margin-right: 10px; color: var(--accent);"></i> inc.mab@gmail.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 MAB Incorporation. All Rights Reserved. Jalpaiguri, West Bengal, India.
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <a href="https://wa.me/918250981300" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Loader
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        // Sticky Navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+                backToTop.style.display = 'flex';
+            } else {
+                nav.classList.remove('scrolled');
+                backToTop.style.display = 'none';
+            }
+        });
+
+        // Mobile Menu
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Hero Slideshow
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        setInterval(nextSlide, 5000);
+
+        // Stats Counter Animation
+        const stats = document.querySelectorAll('.stat-number');
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.getAttribute('data-target'));
+                    let count = 0;
+                    const speed = 2000 / target;
+                    const updateCount = () => {
+                        if (count < target) {
+                            count++;
+                            entry.target.innerText = count + (target === 8 || target === 50 || target === 30 || target === 5 ? '+' : '');
+                            setTimeout(updateCount, speed);
+                        } else {
+                            entry.target.innerText = target + '+';
+                        }
+                    };
+                    updateCount();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        stats.forEach(stat => observer.observe(stat));
+
+        // Back to Top
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth Scroll for Nav Links
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+                navLinks.classList.remove('active');
+            });
+        });
+        // Form Validation Logic
+        const contactForm = document.getElementById('contactForm');
+        const inputs = contactForm.querySelectorAll('input[required], textarea[required]');
+
+        const validateField = (input) => {
+            const group = input.parentElement;
+            let isValid = true;
+
+            if (input.type === 'email') {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                isValid = emailRegex.test(input.value);
+            } else if (input.id === 'phone') {
+                const phoneRegex = /^[0-9]{10}$/;
+                isValid = phoneRegex.test(input.value.replace(/[- ]/g, ''));
+            } else if (input.id === 'name') {
+                isValid = input.value.trim().length >= 3;
+            } else if (input.id === 'message') {
+                isValid = input.value.trim().length >= 10;
+            } else {
+                isValid = input.value.trim() !== '';
+            }
+
+            if (isValid) {
+                group.classList.remove('invalid');
+                group.classList.add('valid');
+            } else {
+                group.classList.remove('valid');
+                group.classList.add('invalid');
+            }
+
+            return isValid;
+        };
+
+        inputs.forEach(input => {
+            input.addEventListener('input', () => validateField(input));
+            input.addEventListener('blur', () => validateField(input));
+        });
+
+        contactForm.addEventListener('submit', (e) => {
+            let formIsValid = true;
+            inputs.forEach(input => {
+                if (!validateField(input)) {
+                    formIsValid = false;
+                }
+            });
+
+            if (!formIsValid) {
+                e.preventDefault();
+                // Find the first invalid element and scroll to it
+                const firstInvalid = contactForm.querySelector('.form-group.invalid');
+                if (firstInvalid) {
+                    firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        });
+    </script>
+</body>
+</html>
